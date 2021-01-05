@@ -5,7 +5,7 @@ export const NavigationWrapperCss = styled.nav`
   width: 100%;
 `;
 export const NavigationListCss = styled.ul`
-  display: inline-block;
+  display: flex;
   width: 100%;
   list-style: none;
   margin: 0;
@@ -14,7 +14,7 @@ export const NavigationListCss = styled.ul`
 `;
 export const NavigationItemCss = styled.li`
   display: flex;
-  width: 16.5%;
+  flex: 1;
   height: 80px;
   line-height: 80px;
   float: left;

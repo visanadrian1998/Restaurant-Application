@@ -1,7 +1,5 @@
-import logo from "./logo.svg";
 import "./App.css";
-import Header from "./components/Header/index";
-import Navigation from "./components/Navigation/index";
+import Routes from "./Router";
 function App() {
   return (
     // <div className="App">
@@ -20,10 +18,7 @@ function App() {
     //     </a>
     //   </header>
     // </div>
-    <>
-      <Header />
-      <Navigation />
-    </>
+    <Routes />
   );
 }
 
