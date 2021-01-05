@@ -7,13 +7,13 @@ export const ContactWrapperCss = styled.div`
 export const TelephoneWrapperCss = styled.div`
   display: flex;
   svg {
-    fill: white;
+    fill: black;
   }
   margin-top: -5px;
 `;
 export const TelephoneTextCss = styled.p`
   font-family: "SummitRegular-Inline";
-  color: white;
+  color: black;
   margin: 0;
   padding: 3px 0 0 10px;
 `;
@@ -22,7 +22,7 @@ export const InstagramWrapperCss = styled.div`
   text-align: center;
   svg {
     cursor: pointer;
-    fill: white;
+    fill: black;
   }
   svg:hover {
     opacity: 0.6;

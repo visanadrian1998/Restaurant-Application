@@ -10,7 +10,8 @@ export const NavigationListCss = styled.ul`
   list-style: none;
   margin: 0;
   padding: 0;
-  border-bottom: 4px solid #afeeee;
+  border-top: 4px solid black;
+  border-bottom: 4px solid black;
 `;
 export const NavigationItemCss = styled.li`
   display: flex;
@@ -19,7 +20,7 @@ export const NavigationItemCss = styled.li`
   line-height: 80px;
   float: left;
   color: #afeeee;
-  background-color: white;
+  background-color: black;
   border-top: none;
   border-left: 2px solid #afeeee;
   cursor: pointer;
@@ -40,6 +41,6 @@ export const NavigationItemSpan = styled.span`
   text-align: center;
   transition: 0.3s;
   ${NavigationItemCss}:hover & {
-    color: white;
+    color: black;
   }
 `;

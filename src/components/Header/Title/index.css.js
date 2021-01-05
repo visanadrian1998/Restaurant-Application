@@ -5,10 +5,12 @@ export const TitleWrapperCss = styled.div`
   @media (prefers-reduced-motion: no-preference) {
     img {
       animation: App-logo-spin infinite 5s linear;
+      cursor: pointer;
     }
   }
 `;
 export const TitleTextCss = styled.h1`
   font-family: "SummitBold-Display";
-  color: white;
+  color: black;
+  cursor: pointer;
 `;

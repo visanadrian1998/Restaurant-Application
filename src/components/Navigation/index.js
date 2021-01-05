@@ -1,4 +1,6 @@
 import React from "react";
+import { useHistory } from "react-router-dom";
+
 import {
   NavigationWrapperCss,
   NavigationListCss,
@@ -6,29 +8,45 @@ import {
   NavigationItemSpan,
 } from "./index.css";
 const Navigation = () => {
+  const history = useHistory();
+
   return (
     <NavigationWrapperCss>
       <NavigationListCss>
         <NavigationItemCss>
-          <NavigationItemSpan>Pizza</NavigationItemSpan>
+          <NavigationItemSpan onClick={() => history.push("/pizza")}>
+            Pizza
+          </NavigationItemSpan>
         </NavigationItemCss>
         <NavigationItemCss>
-          <NavigationItemSpan>Paste</NavigationItemSpan>
+          <NavigationItemSpan onClick={() => history.push("/paste")}>
+            Paste
+          </NavigationItemSpan>
         </NavigationItemCss>
         <NavigationItemCss>
-          <NavigationItemSpan>Burgeri</NavigationItemSpan>
+          <NavigationItemSpan onClick={() => history.push("/burgeri")}>
+            Burgeri
+          </NavigationItemSpan>
         </NavigationItemCss>
         <NavigationItemCss>
-          <NavigationItemSpan>Salate</NavigationItemSpan>
+          <NavigationItemSpan onClick={() => history.push("/salate")}>
+            Salate
+          </NavigationItemSpan>
         </NavigationItemCss>
         <NavigationItemCss>
-          <NavigationItemSpan>Garnituri</NavigationItemSpan>
+          <NavigationItemSpan onClick={() => history.push("/garnituri")}>
+            Garnituri
+          </NavigationItemSpan>
         </NavigationItemCss>
         <NavigationItemCss>
-          <NavigationItemSpan>Sosuri</NavigationItemSpan>
+          <NavigationItemSpan onClick={() => history.push("/sosuri")}>
+            Sosuri
+          </NavigationItemSpan>
         </NavigationItemCss>
         <NavigationItemCss>
-          <NavigationItemSpan>Bauturi</NavigationItemSpan>
+          <NavigationItemSpan onClick={() => history.push("/bauturi")}>
+            Bauturi
+          </NavigationItemSpan>
         </NavigationItemCss>
       </NavigationListCss>
     </NavigationWrapperCss>
