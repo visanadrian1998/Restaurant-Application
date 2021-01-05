@@ -8,6 +8,7 @@ export const TitleWrapperCss = styled.div`
       cursor: pointer;
     }
   }
+  padding-right: 260px;
 `;
 export const TitleTextCss = styled.h1`
   font-family: "SummitBold-Display";
