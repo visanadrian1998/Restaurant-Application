@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 
 import {
@@ -10,9 +10,29 @@ import {
 const Navigation = () => {
   const history = useHistory();
 
+  const [scrolled, setScrolled] = useState(false);
+  const handleScroll = () => {
+    const offset = window.scrollY;
+    const offsetNavBar = document.getElementById("NavBar").offsetTop;
+    if (offset > offsetNavBar) {
+      setScrolled(true);
+    }
+    if (
+      offset <=
+      document.getElementById("HeaderWrapper").offsetTop +
+        document.getElementById("HeaderWrapper").offsetHeight
+    ) {
+      setScrolled(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+  });
+
   return (
     <NavigationWrapperCss>
-      <NavigationListCss>
+      <NavigationListCss id="NavBar" className={scrolled ? "sticky" : ""}>
         <NavigationItemCss>
           <NavigationItemSpan onClick={() => history.push("/pizza")}>
             Pizza

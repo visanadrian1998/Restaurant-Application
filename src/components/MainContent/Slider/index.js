@@ -2,7 +2,7 @@ import React from "react";
 import { Zoom } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 import { SliderWrapperCss, SliderImageCss } from "./index.css";
-import Image1 from "./images/image1.jpg";
+import Image1 from "./images/jpg.jfif";
 import Image2 from "./images/image2.jpg";
 import Image3 from "./images/image3.jpg";
 

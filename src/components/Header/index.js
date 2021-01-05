@@ -6,7 +6,7 @@ import Cart from "./Cart/index";
 class Header extends React.Component {
   render() {
     return (
-      <HeaderWrapperCss>
+      <HeaderWrapperCss id="HeaderWrapper">
         <HeaderContentCss>
           <ContactInfo />
           <Title />

@@ -12,7 +12,14 @@ export const NavigationListCss = styled.ul`
   padding: 0;
   border-top: 4px solid black;
   border-bottom: 4px solid black;
+  &.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+  }
 `;
+
 export const NavigationItemCss = styled.li`
   display: flex;
   flex: 1;
