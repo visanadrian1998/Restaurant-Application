@@ -29,14 +29,3 @@ export const InstagramWrapperCss = styled.div`
   }
   margin-right: 15px;
 `;
-export const MailWrapperCss = styled.div`
-  width: 32px;
-  text-align: center;
-  margin-right: 15px;
-  svg {
-    cursor: pointer;
-  }
-  svg:hover {
-    opacity: 0.6;
-  }
-`;

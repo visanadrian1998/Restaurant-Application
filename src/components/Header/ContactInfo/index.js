@@ -4,11 +4,11 @@ import {
   TelephoneTextCss,
   TelephoneWrapperCss,
   InstagramWrapperCss,
-  MailWrapperCss,
 } from "./index.css";
 import { ReactComponent as Telephone } from "./svg/tel.svg";
 import { ReactComponent as Instagram } from "./svg/instagram.svg";
 import { ReactComponent as Mail } from "./svg/mail.svg";
+import { ReactComponent as Facebook } from "./svg/facebook.svg";
 
 class ContactInfo extends React.Component {
   render() {
@@ -17,9 +17,12 @@ class ContactInfo extends React.Component {
         <InstagramWrapperCss>
           <Instagram />
         </InstagramWrapperCss>
-        <MailWrapperCss>
+        <InstagramWrapperCss>
           <Mail />
-        </MailWrapperCss>
+        </InstagramWrapperCss>
+        <InstagramWrapperCss>
+          <Facebook />
+        </InstagramWrapperCss>
         <TelephoneWrapperCss>
           <Telephone />
           <TelephoneTextCss>0760 231 204</TelephoneTextCss>
