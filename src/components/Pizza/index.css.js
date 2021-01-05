@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const ImageWrapperCss = styled.div`
   img {
     width: 100%;
-    opacity: 0.7;
     height: 300px;
   }
 `;
