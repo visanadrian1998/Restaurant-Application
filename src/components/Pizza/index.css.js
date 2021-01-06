@@ -16,3 +16,9 @@ export const TextCss = styled.p`
   letter-spacing: 0.2px;
   margin-bottom: 900px;
 `;
+export const PizzasWrapperCss = styled.div`
+  display: flex;
+`;
+export const OnePizzaWrapperCss = styled.div`
+  flex: 1;
+`;

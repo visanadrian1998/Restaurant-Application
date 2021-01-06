@@ -2,11 +2,14 @@ import styled from "styled-components";
 
 export const TitleWrapperCss = styled.div`
   text-align: center;
-  @media (prefers-reduced-motion: no-preference) {
-    img {
-      animation: App-logo-spin infinite 5s linear;
-      cursor: pointer;
-    }
+  // @media (prefers-reduced-motion: no-preference) {
+  //   img {
+  //     animation: App-logo-spin infinite 5s linear;
+  //     cursor: pointer;
+  //   }
+  // }
+  img {
+    cursor: pointer;
   }
   padding-right: 260px;
 `;
