@@ -14,11 +14,14 @@ export const TextCss = styled.p`
   font-size: 25px;
   line-height: 28px;
   letter-spacing: 0.2px;
-  margin-bottom: 900px;
 `;
 export const PizzasWrapperCss = styled.div`
   display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-left: 100px;
+  padding-right: 100px;
 `;
 export const OnePizzaWrapperCss = styled.div`
-  flex: 1;
+  // flex-basis: 33.333333%;
 `;

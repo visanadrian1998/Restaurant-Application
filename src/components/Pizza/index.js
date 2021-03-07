@@ -1,5 +1,7 @@
 import React from "react";
 import Image from "./images/pizza.jpg";
+import Produs from "../TemplateProdus/index";
+import { useEffect, useState } from "react";
 import {
   ImageWrapperCss,
   TextCss,
@@ -7,24 +9,19 @@ import {
   OnePizzaWrapperCss,
 } from "./index.css";
 const Pizza = () => {
-  const pizzas = [
-    {
-      name: "Quatro Stagioni",
-      Pret: "23",
-    },
-    {
-      name: "Prosciuto",
-      Pret: "26",
-    },
-    {
-      name: "Capriciosa",
-      Pret: "25",
-    },
-    {
-      name: "Diavola",
-      Pret: "24",
-    },
-  ];
+  const [initialState, setInitialState] = useState([]);
+
+  useEffect(() => {
+    fetch("/pizzas")
+      .then((res) => {
+        if (res.ok) {
+          return res.json();
+        }
+      })
+      .then((response) => {
+        setInitialState(response);
+      });
+  }, []);
   return (
     <>
       <ImageWrapperCss>
@@ -35,12 +32,20 @@ const Pizza = () => {
         Comanda si convinge-te!
       </TextCss>
       <PizzasWrapperCss>
-        {pizzas.map((pizza) => {
+        {initialState.map((pizza) => {
           return (
-            <OnePizzaWrapperCss>
-              <h1>{pizza.name}</h1>
-              <h3>{pizza.Pret}</h3>
-            </OnePizzaWrapperCss>
+            <Produs
+              key={pizza.PizzaID}
+              denumire={pizza.Denumire}
+              ingrediente={pizza.Ingrediente}
+              pret={pizza.Pret}
+              imagine={"./images/pizza-suprema.jpg"}
+            />
+            // <OnePizzaWrapperCss>
+            //   <h1>{pizza.Denumire}</h1>
+            //   <h3>{pizza.Pret}</h3>
+            //   <h3>{pizza.Ingrediente}</h3>
+            // </OnePizzaWrapperCss>
           );
         })}
       </PizzasWrapperCss>
