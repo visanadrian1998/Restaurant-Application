@@ -1,17 +1,51 @@
 import React from "react";
 import Image from "./images/pasta.jpg";
-import { ImageWrapperCss, TextCss } from "../Pizza/index.css";
+import {
+  ImageWrapperCss,
+  TextCss,
+  ProduseWrapperCss,
+  PaginaProduseWrapper,
+} from "../Pizza/index.css";
+import Produs from "../TemplateProdus/index";
+import { useEffect, useState } from "react";
 const Paste = () => {
+  const [initialState, setInitialState] = useState([]);
+
+  useEffect(() => {
+    fetch("/iapastele", {
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+    })
+      .then((res) => {
+        if (res.ok) {
+          return res.json();
+        }
+      })
+      .then((response) => {
+        setInitialState(response);
+      });
+  }, []);
   return (
-    <>
+    <PaginaProduseWrapper>
       <ImageWrapperCss>
         <img src={Image} alt="Pasta" />
       </ImageWrapperCss>
-      <TextCss>
-        Ingrediente proaspete si delicioase care asigura un gust desavarsit.
-        Comanda si convinge-te!
-      </TextCss>
-    </>
+      <ProduseWrapperCss>
+        {initialState.map((paste) => {
+          return (
+            <Produs
+              key={paste.ProdusID}
+              denumire={paste.Denumire}
+              ingrediente={paste.Ingrediente}
+              pret={paste.Pret + " Lei"}
+              imagine={paste.Imagine_Path}
+            />
+          );
+        })}
+      </ProduseWrapperCss>
+    </PaginaProduseWrapper>
   );
 };
 export default Paste;

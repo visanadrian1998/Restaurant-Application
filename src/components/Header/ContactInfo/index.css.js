@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const ContactWrapperCss = styled.div`
   display: flex;
   align-items: center;
+  flex-basis: 33.333%;
 `;
 export const TelephoneWrapperCss = styled.div`
   display: flex;

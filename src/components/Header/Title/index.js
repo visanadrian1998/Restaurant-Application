@@ -16,7 +16,7 @@ const Title = () => {
         onClick={() => history.push("/")}
       />
       <TitleTextCss onClick={() => history.push("/")}>
-        Pizza Scandinavia
+        Scandinavia Pizza
       </TitleTextCss>
     </TitleWrapperCss>
   );
