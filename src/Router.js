@@ -11,6 +11,8 @@ import Salate from "./components/Salate";
 import Garnituri from "./components/Garnituri";
 import Sosuri from "./components/Sosuri";
 import Bauturi from "./components/Bauturi";
+import CautareProdus from "./components/CautareProdus";
+import Footer from "./components/Footer";
 const Routes = () => {
   return (
     <Router>
@@ -25,7 +27,9 @@ const Routes = () => {
         <Route exact path="/garnituri" component={Garnituri} />
         <Route exact path="/sosuri" component={Sosuri} />
         <Route exact path="/bauturi" component={Bauturi} />
+        <Route exact path="/cautare/*" component={CautareProdus} />
       </Switch>
+      <Footer />
     </Router>
   );
 };

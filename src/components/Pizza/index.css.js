@@ -29,5 +29,5 @@ export const ProduseWrapperCss = styled.div`
 //   // flex-basis: 33.333333%;
 // `;
 export const PaginaProduseWrapper = styled.div`
-  background-color: #e1e1e1;
+  background-color: #f4f4f4;
 `;
