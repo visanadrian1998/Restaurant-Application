@@ -4,7 +4,6 @@ import Produs from "../TemplateProdus/index";
 import { useEffect, useState } from "react";
 import {
   ImageWrapperCss,
-  TextCss,
   ProduseWrapperCss,
   PaginaProduseWrapper,
 } from "./index.css";

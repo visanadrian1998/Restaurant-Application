@@ -2,7 +2,6 @@ import React from "react";
 import Image from "./burger.jpg";
 import {
   ImageWrapperCss,
-  TextCss,
   ProduseWrapperCss,
   PaginaProduseWrapper,
 } from "../Pizza/index.css";
