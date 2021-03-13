@@ -13,6 +13,8 @@ import Sosuri from "./components/Sosuri";
 import Bauturi from "./components/Bauturi";
 import CautareProdus from "./components/CautareProdus";
 import Footer from "./components/Footer";
+import ContulMeu from "./components/ContulMeu";
+import InregistrareSucces from "./components/ContulMeu/InregistrareSucces";
 const Routes = () => {
   return (
     <Router>
@@ -28,6 +30,12 @@ const Routes = () => {
         <Route exact path="/sosuri" component={Sosuri} />
         <Route exact path="/bauturi" component={Bauturi} />
         <Route exact path="/cautare/*" component={CautareProdus} />
+        <Route exact path="/contul-meu" component={ContulMeu} />
+        <Route
+          exact
+          path="/inregistrare-succes"
+          component={InregistrareSucces}
+        />
       </Switch>
       <Footer />
     </Router>

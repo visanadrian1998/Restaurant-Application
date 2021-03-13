@@ -8,6 +8,10 @@ export const CartWrapperCss = styled.div`
   svg {
     width: 40px;
     height: 40px;
+    cursor: pointer;
+  }
+  > * {
+    padding: 0px 5px 0px 5px;
   }
 `;
 export const SearchButton = styled.a`
@@ -23,10 +27,9 @@ export const SearchButton = styled.a`
 `;
 export const SearchBox = styled.div`
   height: 40px;
-  padding: 10px;
   :hover {
     input {
-      width: 250px;
+      width: 150px;
       padding: 0 10px;
     }
     a {

@@ -1,6 +1,6 @@
 import React from "react";
 import { ProduseWrapperCss } from "../Pizza/index.css";
-import { PaginaCautareProduseWrapper } from "./index.css";
+import { PaginaCautareProduseWrapper, NuAmGasitRezultate } from "./index.css";
 import Produs from "../TemplateProdus/index";
 import { useEffect, useState } from "react";
 const CautareProdus = () => {
@@ -37,7 +37,9 @@ const CautareProdus = () => {
             );
           })
         ) : (
-          <h2>Ne pare rau, dar nu am gasit rezultate.</h2>
+          <NuAmGasitRezultate>
+            Ne pare rau, dar nu am gasit rezultate.
+          </NuAmGasitRezultate>
         )}
       </ProduseWrapperCss>
     </PaginaCautareProduseWrapper>

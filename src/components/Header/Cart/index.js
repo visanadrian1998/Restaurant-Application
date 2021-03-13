@@ -2,6 +2,7 @@ import React from "react";
 import { CartWrapperCss, SearchButton, SearchBox, Cauta } from "./index.css";
 import { ReactComponent as ShoppingCart } from "./svg/cart.svg";
 import { ReactComponent as Loupe } from "./svg/loupe.svg";
+import { ReactComponent as Account } from "./svg/user.svg";
 import { useHistory } from "react-router-dom";
 import { useState } from "react";
 
@@ -29,6 +30,7 @@ const Cart = () => {
         </SearchButton>
       </SearchBox>
       <ShoppingCart />
+      <Account onClick={() => history.push(`/contul-meu`)} />
     </CartWrapperCss>
   );
 };

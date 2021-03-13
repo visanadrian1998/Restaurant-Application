@@ -5,3 +5,6 @@ export const PaginaCautareProduseWrapper = styled.div`
   padding-top: 30px;
   min-height: 60vh;
 `;
+export const NuAmGasitRezultate = styled.h2`
+  font-family: "Roboto";
+`;
