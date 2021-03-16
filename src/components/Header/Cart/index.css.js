@@ -29,7 +29,7 @@ export const SearchBox = styled.div`
   height: 40px;
   :hover {
     input {
-      width: 150px;
+      width: 200px;
       padding: 0 10px;
     }
     a {
