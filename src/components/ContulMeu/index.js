@@ -53,10 +53,17 @@ const ContulMeu = () => {
       password: password,
     }).then((response) => {
       if (response.data && response.data.length > 0) {
-        Error.current.innerHTML = `Buna ${response.data[0].Nume}`;
+        //Error.current.innerHTML = `Buna ${response.data[0].Nume}`;
         setLoginStatus(true);
       } else {
         Error.current.innerHTML = "Username sau parola incorecta!";
+      }
+    });
+  };
+  const logOut = () => {
+    Axios.post("/logout").then((response) => {
+      if (response.data === "V-ati delogat cu succes.") {
+        setLoginStatus(false);
       }
     });
   };
@@ -65,7 +72,10 @@ const ContulMeu = () => {
     <>
       <RecomandariTitle>Contul Meu</RecomandariTitle>
       {loginStatus === true ? (
-        <h1>bine ai venit in cont {numeUser}</h1>
+        <>
+          <h1>bine ai venit in cont {numeUser}</h1>
+          <p onClick={logOut}>Log Out</p>
+        </>
       ) : (
         <>
           <LoginAndRegisterOptions>
