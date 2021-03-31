@@ -8,12 +8,14 @@ import {
   ButonCumparare,
 } from "./index.css";
 
-const Produs = ({ denumire, ingrediente, pret, imagine }) => {
+import { connect } from "react-redux";
+import { addToCart } from "../../redux/Shopping/shopping-actions";
+const Produs = ({ denumire, ingrediente, pret, imagine, id, addToCart }) => {
   return (
     <ProdusContainerCss>
       <ProdusImageCss>
         <img src={imagine} alt="imagine_produs" />
-        <ButonCumparare></ButonCumparare>
+        <ButonCumparare onClick={() => addToCart(id)}></ButonCumparare>
       </ProdusImageCss>
       <ProdusDenumire>{denumire}</ProdusDenumire>
       <ProdusIngrediente>{ingrediente}</ProdusIngrediente>
@@ -21,4 +23,11 @@ const Produs = ({ denumire, ingrediente, pret, imagine }) => {
     </ProdusContainerCss>
   );
 };
-export default Produs;
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    addToCart: (id) => dispatch(addToCart(id)),
+  };
+};
+
+export default connect(null, mapDispatchToProps)(Produs);

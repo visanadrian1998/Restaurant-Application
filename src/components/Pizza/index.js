@@ -40,6 +40,7 @@ const Pizza = () => {
               ingrediente={pizza.Ingrediente}
               pret={pizza.Pret + " Lei"}
               imagine={pizza.Imagine_Path}
+              id={pizza.ProdusID}
             />
           );
         })}

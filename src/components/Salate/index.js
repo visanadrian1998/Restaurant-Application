@@ -40,6 +40,7 @@ const Salate = () => {
               ingrediente={salata.Ingrediente}
               pret={salata.Pret + " Lei"}
               imagine={salata.Imagine_Path}
+              id={salata.ProdusID}
             />
           );
         })}

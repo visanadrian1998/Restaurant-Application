@@ -15,6 +15,7 @@ import CautareProdus from "./components/CautareProdus";
 import Footer from "./components/Footer";
 import ContulMeu from "./components/ContulMeu";
 import InregistrareSucces from "./components/ContulMeu/InregistrareSucces";
+import CosCumparaturi from "./components/CosCumparaturi";
 const Routes = () => {
   return (
     <Router>
@@ -36,6 +37,7 @@ const Routes = () => {
           path="/inregistrare-succes"
           component={InregistrareSucces}
         />
+        <Route exact path="/cos-cumparaturi" component={CosCumparaturi} />
       </Switch>
       <Footer />
     </Router>

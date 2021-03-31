@@ -40,6 +40,7 @@ const Burgeri = () => {
               ingrediente={burger.Ingrediente}
               pret={burger.Pret + " Lei"}
               imagine={burger.Imagine_Path}
+              id={burger.ProdusID}
             />
           );
         })}

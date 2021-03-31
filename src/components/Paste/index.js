@@ -40,6 +40,7 @@ const Paste = () => {
               ingrediente={paste.Ingrediente}
               pret={paste.Pret + " Lei"}
               imagine={paste.Imagine_Path}
+              id={paste.ProdusID}
             />
           );
         })}

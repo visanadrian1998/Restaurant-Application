@@ -63,3 +63,28 @@ export const Cauta = styled.input`
     color: white;
   }
 `;
+export const CartLogoWrapper = styled.div`
+  position: relative;
+  display: flex;
+  text-align: center;
+`;
+export const CartLogoQuantity = styled.div`
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  height: 25px;
+  width: 25px;
+  z-index: 999999;
+  margin: 0;
+  border-radius: 50%;
+  background-color: black;
+`;
+export const CartLogoQuantityNumber = styled.p`
+  margin: 0;
+  color: white;
+  font-family: "Roboto";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+`;

@@ -48,6 +48,7 @@ const MainContent = () => {
                 ingrediente={recomandare.Ingrediente}
                 pret={recomandare.Pret + " Lei"}
                 imagine={recomandare.Imagine_Path}
+                id={recomandare.ProdusID}
               />
             );
           })}

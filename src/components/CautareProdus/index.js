@@ -33,6 +33,7 @@ const CautareProdus = () => {
                 ingrediente={produs.Ingrediente}
                 pret={produs.Pret + " Lei"}
                 imagine={produs.Imagine_Path}
+                id={produs.ProdusID}
               />
             );
           })
