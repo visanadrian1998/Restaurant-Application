@@ -38,7 +38,7 @@ const Pizza = () => {
               key={pizza.ProdusID}
               denumire={pizza.Denumire}
               ingrediente={pizza.Ingrediente}
-              pret={pizza.Pret + " Lei"}
+              pret={pizza.Pret}
               imagine={pizza.Imagine_Path}
               id={pizza.ProdusID}
             />

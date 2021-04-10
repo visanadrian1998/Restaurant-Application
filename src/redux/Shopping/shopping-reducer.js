@@ -18,12 +18,35 @@ const ShopReducer = (state = INITIAL_STATE, action) => {
                 ? { ...item, qty: item.qty + 1 }
                 : item
             )
-          : [...state.cart, { id: action.payload.id, qty: 1 }],
+          : [
+              ...state.cart,
+              {
+                id: action.payload.id,
+                denumire: action.payload.denumire,
+                pret: action.payload.pret,
+                qty: 1,
+              },
+            ],
       };
     case actionTypes.REMOVE_FROM_CART:
-      return {};
+      return {
+        ...state,
+        cart: state.cart.filter((item) => item.id !== action.payload.id),
+      };
     case actionTypes.ADJUST_QTY:
-      return {};
+      return {
+        ...state,
+        cart: state.cart.map((item) =>
+          action.payload.id === item.id
+            ? { ...item, qty: action.payload.qty }
+            : item
+        ),
+      };
+    case actionTypes.EMPTY_CART:
+      return {
+        ...state,
+        cart: [],
+      };
     default:
       return state;
   }

@@ -31,7 +31,7 @@ const CautareProdus = () => {
                 key={produs.ProdusID}
                 denumire={produs.Denumire}
                 ingrediente={produs.Ingrediente}
-                pret={produs.Pret + " Lei"}
+                pret={produs.Pret}
                 imagine={produs.Imagine_Path}
                 id={produs.ProdusID}
               />

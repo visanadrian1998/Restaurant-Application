@@ -19,6 +19,7 @@ const Cart = ({ cart }) => {
   const history = useHistory();
   const [inputValue, setInputValue] = useState("");
   const [cartSize, setCartSize] = useState(0);
+
   useEffect(() => {
     let quantity = 0;
     cart.forEach((element) => {

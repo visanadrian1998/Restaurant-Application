@@ -46,7 +46,7 @@ const MainContent = () => {
                 key={recomandare.ProdusID}
                 denumire={recomandare.Denumire}
                 ingrediente={recomandare.Ingrediente}
-                pret={recomandare.Pret + " Lei"}
+                pret={recomandare.Pret}
                 imagine={recomandare.Imagine_Path}
                 id={recomandare.ProdusID}
               />

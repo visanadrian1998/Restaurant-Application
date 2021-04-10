@@ -77,11 +77,11 @@ export const CartLogoQuantity = styled.div`
   z-index: 999999;
   margin: 0;
   border-radius: 50%;
-  background-color: black;
+  background-color: tomato;
 `;
 export const CartLogoQuantityNumber = styled.p`
   margin: 0;
-  color: white;
+  color: black;
   font-family: "Roboto";
   position: absolute;
   top: 50%;

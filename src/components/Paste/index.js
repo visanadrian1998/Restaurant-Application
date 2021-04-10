@@ -38,7 +38,7 @@ const Paste = () => {
               key={paste.ProdusID}
               denumire={paste.Denumire}
               ingrediente={paste.Ingrediente}
-              pret={paste.Pret + " Lei"}
+              pret={paste.Pret}
               imagine={paste.Imagine_Path}
               id={paste.ProdusID}
             />

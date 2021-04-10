@@ -38,7 +38,7 @@ const Burgeri = () => {
               key={burger.ProdusID}
               denumire={burger.Denumire}
               ingrediente={burger.Ingrediente}
-              pret={burger.Pret + " Lei"}
+              pret={burger.Pret}
               imagine={burger.Imagine_Path}
               id={burger.ProdusID}
             />

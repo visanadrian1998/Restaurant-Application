@@ -4,21 +4,6 @@ export const NavigationWrapperCss = styled.nav`
   display: inline-block;
   width: 100%;
 `;
-export const NavigationListCss = styled.ul`
-  display: flex;
-  width: 100%;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  border-top: 4px solid black;
-  border-bottom: 4px solid black;
-  &.sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 9999;
-  }
-`;
 
 export const NavigationItemCss = styled.li`
   display: flex;
@@ -34,6 +19,24 @@ export const NavigationItemCss = styled.li`
   transition: 0.3s;
   :hover {
     background-color: #afeeee;
+  }
+  &:first-child {
+    border-left: 0px;
+  }
+`;
+export const NavigationListCss = styled.ul`
+  display: flex;
+  width: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 4px solid black;
+  border-bottom: 4px solid black;
+  &.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
   }
 `;
 export const NavigationItemSpan = styled.span`

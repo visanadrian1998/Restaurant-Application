@@ -76,7 +76,7 @@ export const LoginRegisterSubmit = styled.button`
   background-color: #afeeee;
   border: none;
   padding: 10px 50px;
-  border-radius: 5px;
+  border-radius: 50px 0px;
   font-size: 18px;
   font-weight: bold;
   outline: none;

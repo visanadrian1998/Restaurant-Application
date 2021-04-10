@@ -38,7 +38,7 @@ const Garnituri = () => {
               key={salata.ProdusID}
               denumire={salata.Denumire}
               ingrediente={salata.Ingrediente}
-              pret={salata.Pret + " Lei"}
+              pret={salata.Pret}
               imagine={salata.Imagine_Path}
             />
           );

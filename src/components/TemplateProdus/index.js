@@ -15,18 +15,23 @@ const Produs = ({ denumire, ingrediente, pret, imagine, id, addToCart }) => {
     <ProdusContainerCss>
       <ProdusImageCss>
         <img src={imagine} alt="imagine_produs" />
-        <ButonCumparare onClick={() => addToCart(id)}></ButonCumparare>
+        <ButonCumparare
+          onClick={() => addToCart(id, denumire, pret)}
+        ></ButonCumparare>
       </ProdusImageCss>
       <ProdusDenumire>{denumire}</ProdusDenumire>
       <ProdusIngrediente>{ingrediente}</ProdusIngrediente>
-      <ProdusPret>{pret}</ProdusPret>
+      <ProdusPret>
+        {pret}
+        <span> Lei</span>
+      </ProdusPret>
     </ProdusContainerCss>
   );
 };
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    addToCart: (id) => dispatch(addToCart(id)),
+    addToCart: (id, denumire, pret) => dispatch(addToCart(id, denumire, pret)),
   };
 };
 

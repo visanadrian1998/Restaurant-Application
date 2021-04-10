@@ -12,7 +12,7 @@ export const TelephoneWrapperCss = styled.div`
   }
   margin-top: -5px;
 `;
-export const TelephoneTextCss = styled.h4`
+export const TelephoneTextCss = styled.p`
   font-family: "SummitRegular-Inline";
   color: black;
   margin: 0;
