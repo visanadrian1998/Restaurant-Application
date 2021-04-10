@@ -58,7 +58,11 @@ const CosCumparaturi = ({ emptyCart, cart }) => {
             </TotalText>
           </CartFooter>
           <FinalizeazaWrapper>
-            <ButonFinalizeaza>Finalizeaza Comanda</ButonFinalizeaza>
+            <ButonFinalizeaza
+              onClick={() => history.push(`/cos-cumparaturi/finalizare`)}
+            >
+              Finalizeaza Comanda
+            </ButonFinalizeaza>
           </FinalizeazaWrapper>
         </>
       ) : (

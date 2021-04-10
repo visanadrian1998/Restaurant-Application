@@ -16,6 +16,7 @@ const ContulMeu = () => {
   const [nameReg, setNameReg] = useState("");
   const [adresaReg, setAdresaReg] = useState("");
   const [confirmPasswordReg, setConfirmPasswordReg] = useState("");
+  const [telefonReg, setTelefonReg] = useState("");
   const history = useHistory();
 
   const Error = useRef(null);
@@ -30,6 +31,10 @@ const ContulMeu = () => {
     }
     if (adresaReg === "") {
       Error.current.innerHTML = "Campul 'Adresa' este obligatoriu";
+      return;
+    }
+    if (telefonReg === "") {
+      Error.current.innerHTML = "Campul 'Telefon' este obligatoriu";
       return;
     }
     if (passwordReg.length < 6) {
@@ -50,6 +55,7 @@ const ContulMeu = () => {
       username: usernameReg,
       nume: nameReg,
       adresa: adresaReg,
+      telefon: telefonReg,
       password: passwordReg,
     }).then((response) => {
       if (response.data && response.data.err) {
@@ -83,6 +89,11 @@ const ContulMeu = () => {
         rows="5"
         placeholder="Adresa"
         onChange={(e) => setAdresaReg(e.target.value)}
+      />
+      <RegisterInput
+        type="text"
+        placeholder="Telefon"
+        onChange={(e) => setTelefonReg(e.target.value)}
       />
       <RegisterInput
         type="password"

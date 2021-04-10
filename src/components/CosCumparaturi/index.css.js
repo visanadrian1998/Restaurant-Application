@@ -10,6 +10,10 @@ export const TotalText = styled.h1`
   font-family: "SummitRegular-Inline";
   color: #6cbd45;
 `;
+export const TransportText = styled.h3`
+  font-family: "SummitRegular-Inline";
+  color: #6cbd45;
+`;
 export const CartFooterButoane = styled.div`
   display: flex;
   justify-content: space-between;

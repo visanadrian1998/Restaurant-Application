@@ -16,6 +16,8 @@ import Footer from "./components/Footer";
 import ContulMeu from "./components/ContulMeu";
 import InregistrareSucces from "./components/ContulMeu/InregistrareSucces";
 import CosCumparaturi from "./components/CosCumparaturi";
+import FinalizareComanda from "./components/FinalizareComanda";
+import ComandaPlasata from "./components/FinalizareComanda/ComandaPlasata";
 const Routes = () => {
   return (
     <Router>
@@ -38,6 +40,12 @@ const Routes = () => {
           component={InregistrareSucces}
         />
         <Route exact path="/cos-cumparaturi" component={CosCumparaturi} />
+        <Route
+          exact
+          path="/cos-cumparaturi/finalizare"
+          component={FinalizareComanda}
+        />
+        <Route exact path="/comanda-plasata" component={ComandaPlasata} />
       </Switch>
       <Footer />
     </Router>

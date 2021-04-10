@@ -1,7 +1,7 @@
 import * as actionTypes from "./shopping-types";
 
 const INITIAL_STATE = {
-  cart: [], //{id,title,descr,price,img,qty}
+  cart: [],
 };
 
 const ShopReducer = (state = INITIAL_STATE, action) => {
