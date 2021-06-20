@@ -26,7 +26,13 @@ const ContulMeu = () => {
 
   useEffect(() => {
     Axios.get("/logare").then((response) => {
-      if (response.data && response.data.loggedIn) {
+      if (
+        response.data &&
+        response.data.loggedIn &&
+        response.data.user &&
+        response.data.user[0] &&
+        response.data.user[0].Nume
+      ) {
         setLoginStatus(response.data.loggedIn);
         setNumeUser(response.data.user[0].Nume);
       }

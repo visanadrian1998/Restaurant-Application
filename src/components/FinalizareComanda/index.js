@@ -29,6 +29,7 @@ const FinalizareComanda = ({ cart, emptyCart }) => {
   const [telefon, setTelefon] = useState("");
   const [username, setUsername] = useState("");
   const [costTransport, setCostTransport] = useState(10);
+  const [reducere, setReducere] = useState(false);
   const [observatii, setObservatii] = useState("");
 
   const generatePDF = () => {
@@ -50,6 +51,9 @@ const FinalizareComanda = ({ cart, emptyCart }) => {
     });
     doc.text("Transport", 50, 210 + cnt * 20);
     doc.text(costTransport.toString() + " lei", 150, 210 + cnt * 20);
+    cnt++;
+    doc.text("Reducere", 50, 210 + cnt * 20);
+    doc.text(reducere ? "10%" : "0%", 150, 210 + cnt * 20);
     cnt++;
     doc.text("Total", 250, 210 + cnt * 20);
     doc.text(pretTotal.toString() + " lei", 350, 210 + cnt * 20);
@@ -90,6 +94,14 @@ const FinalizareComanda = ({ cart, emptyCart }) => {
     });
   }, []);
   useEffect(() => {
+    Axios.get("/nrcomenzi").then((response) => {
+      console.log(response.data.length);
+      if (response && response.data && response.data.length >= 3) {
+        setReducere(true);
+      }
+    });
+  }, []);
+  useEffect(() => {
     let pret = 0;
     cart.forEach((item) => {
       pret += item.qty * item.pret;
@@ -99,8 +111,8 @@ const FinalizareComanda = ({ cart, emptyCart }) => {
     } else {
       setCostTransport(0);
     }
-    setPretTotal(pret);
-  }, [cart, pretTotal, setPretTotal]);
+    reducere ? setPretTotal(pret * 0.95) : setPretTotal(pret);
+  }, [cart, pretTotal, setPretTotal, reducere]);
   return (
     <>
       <FinalizareComandaTitle>Sumar Comanda</FinalizareComandaTitle>
@@ -121,6 +133,14 @@ const FinalizareComanda = ({ cart, emptyCart }) => {
           {cart.length > 0 ? (
             <>
               <TransportText>Transport: {costTransport} Lei</TransportText>
+              {reducere ? (
+                <TransportText>Beneficiezi de reducere 5%!</TransportText>
+              ) : (
+                <TransportText>
+                  La minim 3 comenzi efectuate beneficiezi de reducere 5%!
+                </TransportText>
+              )}
+
               <TotalText>
                 <span style={{ color: "black" }}>Total:</span> {pretTotal} Lei
               </TotalText>
