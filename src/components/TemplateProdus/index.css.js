@@ -52,4 +52,9 @@ export const ButonCumparare = styled.div`
   opacity: 0;
   transition-duration: 1s;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 900;
 `;

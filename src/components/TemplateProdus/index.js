@@ -15,9 +15,9 @@ const Produs = ({ denumire, ingrediente, pret, imagine, id, addToCart }) => {
     <ProdusContainerCss>
       <ProdusImageCss>
         <img src={imagine} alt="imagine_produs" />
-        <ButonCumparare
-          onClick={() => addToCart(id, denumire, pret)}
-        ></ButonCumparare>
+        <ButonCumparare onClick={() => addToCart(id, denumire, pret)}>
+          Adauga
+        </ButonCumparare>
       </ProdusImageCss>
       <ProdusDenumire>{denumire}</ProdusDenumire>
       <ProdusIngrediente>{ingrediente}</ProdusIngrediente>
