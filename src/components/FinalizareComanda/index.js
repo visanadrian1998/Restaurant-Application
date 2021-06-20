@@ -20,6 +20,7 @@ import {
 } from "../CosCumparaturi/index.css";
 import { RegisterAddress } from "../ContulMeu/index.css";
 import Axios from "axios";
+import jsPDF from "jspdf";
 
 const FinalizareComanda = ({ cart, emptyCart }) => {
   const history = useHistory();
@@ -29,6 +30,31 @@ const FinalizareComanda = ({ cart, emptyCart }) => {
   const [username, setUsername] = useState("");
   const [costTransport, setCostTransport] = useState(10);
   const [observatii, setObservatii] = useState("");
+
+  const generatePDF = () => {
+    const doc = new jsPDF({ unit: "px" });
+    doc.text("Scandinavia Pizza", 170, 60);
+    doc.text(`Adresa:${adresa}`, 50, 110);
+    doc.text(`Telefon:${telefon}`, 50, 130);
+    doc.text(`Ora comenzii:${new Date().toLocaleString()}`, 50, 150);
+    doc.text(`Observatii:${observatii}`, 50, 170);
+    doc.text("Produs", 50, 190);
+    doc.text("Pret unitar", 250, 190);
+    doc.text("Cantitate", 350, 190);
+    let cnt = 0;
+    cart.forEach((element) => {
+      doc.text(element.denumire, 50, 210 + cnt * 20);
+      doc.text(element.pret.toString(), 250, 210 + cnt * 20);
+      doc.text(element.qty.toString(), 350, 210 + cnt * 20);
+      cnt++;
+    });
+    doc.text("Transport", 50, 210 + cnt * 20);
+    doc.text(costTransport.toString() + " lei", 150, 210 + cnt * 20);
+    cnt++;
+    doc.text("Total", 250, 210 + cnt * 20);
+    doc.text(pretTotal.toString() + " lei", 350, 210 + cnt * 20);
+    doc.save("comanda.pdf");
+  };
 
   const PlaseazaComanda = () => {
     if (adresa.trim() === "" || telefon.trim() === "") return;
@@ -49,6 +75,7 @@ const FinalizareComanda = ({ cart, emptyCart }) => {
       } else {
         history.push(`/comanda-plasata`);
         emptyCart();
+        generatePDF();
       }
     });
   };
