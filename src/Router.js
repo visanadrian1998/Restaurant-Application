@@ -12,12 +12,12 @@ import Garnituri from "./components/Garnituri";
 import Sosuri from "./components/Sosuri";
 import Bauturi from "./components/Bauturi";
 import CautareProdus from "./components/CautareProdus";
-import Footer from "./components/Footer";
 import ContulMeu from "./components/ContulMeu";
 import InregistrareSucces from "./components/ContulMeu/InregistrareSucces";
 import CosCumparaturi from "./components/CosCumparaturi";
 import FinalizareComanda from "./components/FinalizareComanda";
 import ComandaPlasata from "./components/FinalizareComanda/ComandaPlasata";
+import ComenzileMele from "./components/ComenzileMele";
 const Routes = () => {
   return (
     <Router>
@@ -46,8 +46,8 @@ const Routes = () => {
           component={FinalizareComanda}
         />
         <Route exact path="/comanda-plasata" component={ComandaPlasata} />
+        <Route exact path="/comenzile-mele" component={ComenzileMele} />
       </Switch>
-      <Footer />
     </Router>
   );
 };

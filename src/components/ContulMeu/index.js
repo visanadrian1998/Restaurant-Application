@@ -8,10 +8,12 @@ import {
   LoginInput,
   LoginRegisterSubmit,
   ErrorMessage,
+  ComenziLinkCss,
 } from "./index.css";
 import Register from "./Register";
 import Axios from "axios";
 import { useEffect, useState, useRef } from "react";
+import { useHistory } from "react-router-dom";
 
 const ContulMeu = () => {
   Axios.defaults.withCredentials = true;
@@ -23,6 +25,7 @@ const ContulMeu = () => {
   const [loginOrRegister, setLoginOrRegister] = useState("login");
 
   const Error = useRef(null);
+  const history = useHistory();
 
   useEffect(() => {
     Axios.get("/logare").then((response) => {
@@ -59,7 +62,6 @@ const ContulMeu = () => {
       password: password,
     }).then((response) => {
       if (response.data && response.data.length > 0) {
-        //Error.current.innerHTML = `Buna ${response.data[0].Nume}`;
         setLoginStatus(true);
       } else {
         Error.current.innerHTML = "Username sau parola incorecta!";
@@ -80,6 +82,13 @@ const ContulMeu = () => {
       {loginStatus === true ? (
         <>
           <h1>bine ai venit in cont {numeUser}</h1>
+          <ComenziLinkCss
+            onClick={() => {
+              history.push(`/comenzile-mele`);
+            }}
+          >
+            Comenzile mele
+          </ComenziLinkCss>
           <p onClick={logOut}>Log Out</p>
         </>
       ) : (

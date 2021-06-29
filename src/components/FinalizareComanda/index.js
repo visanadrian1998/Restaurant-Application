@@ -95,7 +95,6 @@ const FinalizareComanda = ({ cart, emptyCart }) => {
   }, []);
   useEffect(() => {
     Axios.get("/nrcomenzi").then((response) => {
-      console.log(response.data.length);
       if (response && response.data && response.data.length >= 3) {
         setReducere(true);
       }

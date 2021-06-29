@@ -101,3 +101,6 @@ export const LinkCss = styled.span`
   color: blue;
   text-decoration: underline;
 `;
+export const ComenziLinkCss = styled.h3`
+  cursor: pointer;
+`;
